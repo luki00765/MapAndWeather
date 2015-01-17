@@ -18,6 +18,7 @@ using Windows.Devices.Geolocation;
 using Windows.Services.Maps;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls.Maps;
+using Windows.UI.Xaml.Media.Imaging;
 
 // Szablon elementu Pusta strona jest udokumentowany pod adresem http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -68,11 +69,12 @@ namespace MapAndWeather
 			var result = await response.Content.ReadAsStringAsync();
 
 			var res = JsonConvert.DeserializeObject<RootObject>(result);
-			txtBlock.Text = string.Join("\n", res.name, CalculateKelvinToCelcius(res.main.temp));
+			txtBlock.Text = string.Join("\n", res.name, CalculateKelvinToCelcius(res.main.temp) + " *C");
 
 			foreach (var item in res.weather)
 			{
 				txtBlock.Text += "\n" + item.description;
+				myImage.Source = new BitmapImage(new Uri(@"http://openweathermap.org/img/w/" + item.icon.ToString() + ".png"));
 			}
 		}
 
@@ -96,11 +98,12 @@ namespace MapAndWeather
 			var result = await response.Content.ReadAsStringAsync();
 
 			var res = JsonConvert.DeserializeObject<RootObject>(result);
-			ShowWeather.Text = string.Join("\n", res.name, CalculateKelvinToCelcius(res.main.temp));
-
+			ShowWeather.Text = string.Join("\n", res.name, CalculateKelvinToCelcius(res.main.temp) + " *C");
+			
 			foreach (var item in res.weather)
 			{
 				ShowWeather.Text += "\n" + item.description;
+				myImageToSelectedWeather.Source = new BitmapImage(new Uri(@"http://openweathermap.org/img/w/" + item.icon.ToString() + ".png"));
 			}
 
 			ShowPosition.Text = latitude + "\n" + longitude;

@@ -15,6 +15,7 @@
 				<Grid>
 					<TextBlock x:Name="txtBlock" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="30"/>
 					<TextBlock x:Name="geolocation" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="220" Width="250" FontSize="20"/>
+					<Image x:Name="myImage" Height="150" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 				</Grid>
 			</PivotItem>
 			<PivotItem Header="Map">
@@ -24,7 +25,7 @@
 						<RowDefinition Height="*"/>
 					</Grid.RowDefinitions>
 					<Maps:MapControl Grid.Row="0" x:Name="MapControl" MapTapped="MapControl_OnMapTapped"/>
-					<Slider Grid.Row="1" x:Name="mySlider" Maximum="20" Minimum="0" ValueChanged="MySlider_OnValueChanged"/>
+					<Slider Grid.Row="1" x:Name="mySlider" Maximum="20" Minimum="2" ValueChanged="MySlider_OnValueChanged"/>
 				</Grid>
 			</PivotItem>
 			<PivotItem Header="Selected Weather">
@@ -33,8 +34,9 @@
 						<RowDefinition Height="*"/>
 						<RowDefinition Height="*"/>
 					</Grid.RowDefinitions>
-					<TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ShowWeather" TextWrapping="Wrap" FontSize="30"/>
-					<TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ShowPosition" TextWrapping="Wrap" FontSize="30"/>
+					<TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ShowWeather" TextWrapping="Wrap" FontSize="30"/>
+					<TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Name="ShowPosition" TextWrapping="Wrap" FontSize="30"/>
+					<Image Grid.Row="1" x:Name="myImageToSelectedWeather" Height="150" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center"/>
 				</Grid>
 			</PivotItem>
 		</Pivot>
