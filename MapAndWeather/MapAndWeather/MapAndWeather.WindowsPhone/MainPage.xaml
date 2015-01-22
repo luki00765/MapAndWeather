@@ -8,14 +8,37 @@
 	xmlns:maps="clr-amespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Page.Resources>
+		<local:BoolVisibilityConverter x:Key="BoolVisibilityConverter"/>
+	</Page.Resources>
 
 	<Grid>
-		<Pivot>
+		<Pivot x:Name="Pivot">
 			<PivotItem Header="Your Position">
 				<Grid>
-					<TextBlock x:Name="txtBlock" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="30"/>
-					<TextBlock x:Name="geolocation" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="220" Width="250" FontSize="20"/>
-					<Image x:Name="myImage" Height="150" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="2*"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<ProgressRing x:Name="ProgressRingOnCurrentlyPosition" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center" IsActive="False"/>
+					<TextBlock Grid.Row="0" Grid.Column="1" x:Name="txtBlock" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="30"/>
+					<Image Grid.Row="0" Grid.Column="0" x:Name="myImage" Height="150" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+					
+					<StackPanel  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="Auto">
+						<ToggleButton x:Name="TglButton" HorizontalAlignment="Center"/>
+						<ScrollViewer Visibility="{Binding ElementName=TglButton, Path=IsChecked, Converter={StaticResource BoolVisibilityConverter}}" VerticalScrollBarVisibility="Auto">
+							<TextBlock FontSize="160" Text="TEST"/>
+						</ScrollViewer>
+						
+						<StackPanel>
+							<TextBlock x:Name="geolocation" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20" Margin="10"/>
+							<TextBlock x:Name="TextBlockTimeFromPosition" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" TextWrapping="Wrap"/>
+						</StackPanel>
+					</StackPanel>
 				</Grid>
 			</PivotItem>
 			<PivotItem Header="Map">
@@ -30,13 +53,19 @@
 			</PivotItem>
 			<PivotItem Header="Selected Weather">
 				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="2*"/>
+					</Grid.ColumnDefinitions>
 					<Grid.RowDefinitions>
-						<RowDefinition Height="*"/>
-						<RowDefinition Height="*"/>
+						<RowDefinition/>
+						<RowDefinition/>
 					</Grid.RowDefinitions>
-					<TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ShowWeather" TextWrapping="Wrap" FontSize="30"/>
-					<TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Name="ShowPosition" TextWrapping="Wrap" FontSize="30"/>
-					<Image Grid.Row="1" x:Name="myImageToSelectedWeather" Height="150" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+					<ProgressRing x:Name="ProgressRing" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center" IsActive="False"/>
+					<TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ShowWeather" TextWrapping="Wrap" FontSize="30"/>
+					<TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ShowPosition" FontSize="20" Margin="10"/>
+					<Image Grid.Row="0" Grid.Column="0" x:Name="myImageToSelectedWeather" Height="150" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+					<TextBlock x:Name="TextBlockTimeForSelectedWeather" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" TextWrapping="Wrap"/>
 				</Grid>
 			</PivotItem>
 		</Pivot>

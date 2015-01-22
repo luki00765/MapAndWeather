@@ -529,3 +529,14 @@ namespace MapAndWeather.MapAndWeather_WindowsPhone_XamlTypeInfo
 }
 
 
+
+
+
+
+
+
+
+
+
+
+

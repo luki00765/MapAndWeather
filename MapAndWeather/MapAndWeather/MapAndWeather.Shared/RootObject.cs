@@ -35,6 +35,16 @@ namespace MapAndWeather
 		public double pressure { get; set; }
 		public double temp_min { get; set; }
 		public double temp_max { get; set; }
+		public double sea_level { get; set; }
+		public double grnd_level { get; set; }
+	}
+
+	public class City
+	{
+		public int id { get; set; }
+		public string name { get; set; }
+		public Coord coord { get; set; }
+		public string country { get; set; }
 	}
 
 	public class Wind
@@ -69,6 +79,7 @@ namespace MapAndWeather
 		public Rain rain { get; set; }
 		public Snow snow { get; set; }
 		public Clouds clouds { get; set; }
+		public City city { get; set; }
 		public int dt { get; set; }
 		public int id { get; set; }
 		public string name { get; set; }

@@ -36,11 +36,11 @@ namespace MapAndWeather
 			var result = await response.Content.ReadAsStringAsync();
 			
 			var res = JsonConvert.DeserializeObject<RootObject>(result);
-			txtBlock.Text = string.Join(" ", res.name, res.wind.speed);
+			//txtBlock.Text = string.Join(" ", res.name, res.wind.speed);
 
 			foreach(var item in res.weather)
 			{
-				txtBlock.Text += item.description;
+				//txtBlock.Text += item.description;
 			}
 		}
 

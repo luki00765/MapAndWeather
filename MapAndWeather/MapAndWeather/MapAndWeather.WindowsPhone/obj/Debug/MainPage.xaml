@@ -13,9 +13,17 @@
 		<Pivot>
 			<PivotItem Header="Your Position">
 				<Grid>
-					<TextBlock x:Name="txtBlock" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="30"/>
-					<TextBlock x:Name="geolocation" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="220" Width="250" FontSize="20"/>
-					<Image x:Name="myImage" Height="150" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="2*"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<TextBlock Grid.Row="0" Grid.Column="1" x:Name="txtBlock" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="30"/>
+					<TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" x:Name="geolocation" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" Margin="10"/>
+					<Image Grid.Row="0" Grid.Column="0" x:Name="myImage" Height="150" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center"/>
 				</Grid>
 			</PivotItem>
 			<PivotItem Header="Map">
@@ -30,13 +38,17 @@
 			</PivotItem>
 			<PivotItem Header="Selected Weather">
 				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="2*"/>
+					</Grid.ColumnDefinitions>
 					<Grid.RowDefinitions>
-						<RowDefinition Height="*"/>
-						<RowDefinition Height="*"/>
+						<RowDefinition/>
+						<RowDefinition/>
 					</Grid.RowDefinitions>
-					<TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ShowWeather" TextWrapping="Wrap" FontSize="30"/>
-					<TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Name="ShowPosition" TextWrapping="Wrap" FontSize="30"/>
-					<Image Grid.Row="1" x:Name="myImageToSelectedWeather" Height="150" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+					<TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ShowWeather" TextWrapping="Wrap" FontSize="30"/>
+					<TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="ShowPosition" FontSize="20" Margin="10"/>
+					<Image Grid.Row="0" Grid.Column="0" x:Name="myImageToSelectedWeather" Height="150" Width="150" VerticalAlignment="Top" HorizontalAlignment="Center"/>
 				</Grid>
 			</PivotItem>
 		</Pivot>
