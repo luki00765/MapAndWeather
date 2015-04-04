@@ -1,1 +1,0 @@
-C:\Users\Lukii\Documents\Visual Studio 2013\Projects\MapAndWeather\MapAndWeather\MapAndWeather.Windows\MapAndWeather.Windows.csproj;x86
