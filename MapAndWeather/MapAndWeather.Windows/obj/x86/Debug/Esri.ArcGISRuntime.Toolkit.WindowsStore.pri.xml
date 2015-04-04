@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Esri.ArcGISRuntime.Toolkit.WindowsStore" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Esri.ArcGISRuntime.Toolkit.WindowsStore">
+				<NamedResource name="Esri.ArcGISRuntime.Toolkit.WindowsStore.xr.xml" uri="ms-resource://Esri.ArcGISRuntime.Toolkit.WindowsStore/Files/Esri.ArcGISRuntime.Toolkit.WindowsStore/Esri.ArcGISRuntime.Toolkit.WindowsStore.xr.xml">
+					<Candidate type="Path">
+						<Value>Esri.ArcGISRuntime.Toolkit.WindowsStore\Esri.ArcGISRuntime.Toolkit.WindowsStore.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xaml" uri="ms-resource://Esri.ArcGISRuntime.Toolkit.WindowsStore/Files/Esri.ArcGISRuntime.Toolkit.WindowsStore/Themes/Generic.xaml">
+						<Candidate type="Path">
+							<Value>Esri.ArcGISRuntime.Toolkit.WindowsStore\Themes\Generic.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Generic.xbf" uri="ms-resource://Esri.ArcGISRuntime.Toolkit.WindowsStore/Files/Esri.ArcGISRuntime.Toolkit.WindowsStore/Themes/Generic.xbf">
+						<Candidate type="Path">
+							<Value>Esri.ArcGISRuntime.Toolkit.WindowsStore\Themes\Generic.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

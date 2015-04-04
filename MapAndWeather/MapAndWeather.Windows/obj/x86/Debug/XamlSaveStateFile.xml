@@ -1,0 +1,10 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\lukii\documents\visual studio 2013\projects\mapandweather\mapandweather\mapandweather.windows\obj\x86\debug\intermediatexaml\mapandweather.windows.exe" HashGuid="b9ec38b2-0ff6-9393-b80a-db8cd2795106" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="c:\users\lukii\documents\visual studio 2013\projects\mapandweather\packages\esri.arcgisruntime.10.2.4.748\sdk\win81\x86\esri.arcgisruntime.dll" HashGuid="6d16c3e3-8e41-4f36-dfce-58a31aae6a66" />
+    <ReferenceAssembly PathName="c:\users\lukii\documents\visual studio 2013\projects\mapandweather\packages\esri.arcgisruntime.toolkit.10.2.4.748\sdk\win81\x86\esri.arcgisruntime.toolkit.windowsstore.dll" HashGuid="860f8f42-7958-01d3-a6da-b45786341cab" />
+    <ReferenceAssembly PathName="c:\users\lukii\documents\visual studio 2013\projects\mapandweather\packages\newtonsoft.json.6.0.8\lib\netcore45\newtonsoft.json.dll" HashGuid="fd3dfcab-cf69-c796-78a2-2423dadb814b" />
+    <ReferenceAssembly PathName="c:\users\lukii\documents\visual studio 2013\projects\mapandweather\packages\esri.arcgisruntime.10.2.4.748\sdk\win81\x86\runtimecorenet.winmd" HashGuid="55d19e45-7a53-ee58-b9de-cf91d23a34ed" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
